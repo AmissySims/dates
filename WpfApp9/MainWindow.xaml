@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
         <!--<DataGrid Loaded="DataGrid_Loaded" x:Name="Data" AutoGenerateColumns="False"
                   >
             <DataGrid.Columns>
@@ -16,20 +20,9 @@
 
             </DataGrid.Columns>
         </DataGrid>-->
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <StackPanel>
-                <TextBlock Text="Имя"/>
-                <TextBox  x:Name="NameTb" Width="100" PreviewTextInput="NameTb_PreviewTextInput"/>
-                <TextBlock Text="Дата рождения"/>
-                <TextBox  x:Name="DateTb" Width="100" PreviewTextInput="DateTb_PreviewTextInput" TextChanged="DateTb_TextChanged"/>
-                <Button x:Name="GenBt" Content="генерация" Click="GenBt_Click"/>
-            </StackPanel>
-            <StackPanel>
-                <TextBlock Text="Логин"/>
-                <TextBlock x:Name="Logintb"/>
-                <TextBlock Text="пароль"/>
-                <TextBlock x:Name="Pastb"/>
-            </StackPanel>
+        <Frame Grid.Row="0" NavigationUIVisibility="Hidden" x:Name="Frame1"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="Bt1" Content="Dates" Click="Bt1_Click"/>
         </StackPanel>
     </Grid>
 </Window>
