@@ -29,7 +29,7 @@ namespace WpfApp9
             
            
         }
-        public static Random rnd = new Random();
+    
 
         //        public class Person
         //        {
@@ -67,7 +67,7 @@ namespace WpfApp9
             string dateBirth = DateTb.Text;
             try
             {
-                if (Regex.IsMatch(dateBirth, @"^(?:31|[0-3](?(?<=0)[1-9]|(?(?<=3)[01]|\d)))[-.,][01](?(?<=1)[0-2]|(?(?<=0)[1-9]|\d))[-.,][12](?(?<=1)9\d{2}|\d{3})$"))
+                if (Regex.IsMatch(dateBirth, @"^(?:31|[0-3](?(?<=0)[1-9]|(?(?<=3)[01]|\d)))[.][01](?(?<=1)[0-2]|(?(?<=0)[1-9]|\d))[.][12](?(?<=1)9\d{2}|\d{3})$"))
                 {
                     string login = GenLogin(name, dateBirth);
                     Logintb.Text = login;
