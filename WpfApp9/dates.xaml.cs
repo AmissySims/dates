@@ -41,14 +41,30 @@ namespace WpfApp9
         {
             string name = NameTb.Text;
             string dateBirth = DateTb.Text;
+            
             try
             {
+              
                 if (Regex.IsMatch(dateBirth, @"^(?:31|[0-3](?(?<=0)[1-9]|(?(?<=3)[01]|\d)))[.][01](?(?<=1)[0-2]|(?(?<=0)[1-9]|\d))[.][12](?(?<=1)9\d{2}|\d{3})$"))
                 {
-                    string login = GenLogin(name, dateBirth);
-                    Logintb.Text = login;
-                    string pas = GenPas();
-                    Pastb.Text = pas;
+                    if (string.IsNullOrEmpty(name))
+                    {
+                        MessageBox.Show("null name");
+                        return;
+                    }
+                    if (string.IsNullOrEmpty(dateBirth))
+                    {
+                        MessageBox.Show("null date");
+                        return;
+                    }
+                    else
+                    {
+                        string login = GenLogin(name, dateBirth);
+                        Logintb.Text = login;
+                        string pas = GenPas();
+                        Pastb.Text = pas;
+                    }
+                    
                 }
                 else
                 {

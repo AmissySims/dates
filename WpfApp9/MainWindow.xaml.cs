@@ -36,6 +36,11 @@ namespace WpfApp9
             Frame1.Navigate(new dates());
         }
 
+        private void Bt2_Click(object sender, RoutedEventArgs e)
+        {
+            Frame1.Navigate(new grids());
+        }
+
 
         //        public class Person
         //        {

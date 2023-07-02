@@ -11,18 +11,11 @@
             <RowDefinition Height="5*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <!--<DataGrid Loaded="DataGrid_Loaded" x:Name="Data" AutoGenerateColumns="False"
-                  >
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="name" Binding="{Binding Name}"/>
-                <DataGridTextColumn Header="age" Binding="{Binding Age}"/>
-                
-
-            </DataGrid.Columns>
-        </DataGrid>-->
+   
         <Frame Grid.Row="0" NavigationUIVisibility="Hidden" x:Name="Frame1"/>
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             <Button x:Name="Bt1" Content="Dates" Click="Bt1_Click"/>
+            <Button x:Name="Bt2" Content="Dates" Click="Bt2_Click"/>
         </StackPanel>
     </Grid>
 </Window>
